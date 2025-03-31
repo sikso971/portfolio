@@ -1,0 +1,98 @@
+/* 🌍 Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* 🎯 Conteneur principal */
+.container {
+    position: center;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔵 Élément central */
+.center {
+    width: 120px;
+    height: 120px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌸 Pétales */
+.petal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🌀 Placement circulaire des pétales */
+.sp1 { transform: rotate(0deg) translateY(-150px); }
+.sp2 { transform: rotate(72deg) translateY(-150px); }
+.sp3 { transform: rotate(144deg) translateY(-150px); }
+.entreprise2 { transform: rotate(216deg) translateY(-150px); }
+.entreprise1 { transform: rotate(290deg) translateY(-150px); }
+.formation { transform: rotate(360deg) translateY(-150px); }
+.docs { transform: rotate(290deg) translateY(-150px); }
+.veille { transform: rotate(432deg) translateY(-150px); }
+.profil { transform: rotate(504deg) translateY(-150px); }
+
+/* ✨ Effet au survol */
+.petal:hover {
+    transform: scale(1.2);
+    background-color: #0056b3;
+}
+
+/* 🚀 Animation d’entrée */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.petal, .center {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+    .center {
+        width: 80px;
+        height: 80px;
+    }
+    .petal {
+        width: 80px;
+        height: 80px;
+    }
+}
